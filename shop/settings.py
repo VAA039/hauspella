@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'products', # Если не добавить:  Django не будет использовать приложение вообще: модели не создадутся 
+    
 ]
 
 MIDDLEWARE = [
