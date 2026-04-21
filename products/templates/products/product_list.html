@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Магазин</title>
+    <title>Мой магазин</title>
 </head>
 <body>
 
 <h1>Список товаров</h1>
 
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
 
-{% for product in products %} 
-    <div>
-
-        <h2>{{ product.name }}</h2> 
-        <p>{{ product.description|truncatechars:200 }}</p>
-        <p>Цена: {{ product.price }}</p>
+{% for product in products %}
+    <div style="border: 1px solid #ccc; padding: 15px; width: 250px;">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description|truncatechars:100 }}</p>
+        <p><strong>Цена:</strong> {{ product.price }}</p>
     </div>
-    <hr>
-{% endfor %} 
+{% endfor %}
+
+</div>
 
 </body>
 </html>
