@@ -7,14 +7,16 @@
 
 <h1>Список товаров</h1>
 
-{% for product in products %}
+<!-- {% for product in products %} → цикл по товарам -->
+{% for product in products %} 
     <div>
-        <h2>{{ product.name }}</h2>
+      <!-- {{ product.name }} → вывод поля -->
+        <h2>{{ product.name }}</h2> 
         <p>{{ product.description }}</p>
         <p>Цена: {{ product.price }}</p>
     </div>
     <hr>
-{% endfor %}
+{% endfor %} 
 
 </body>
 </html>
